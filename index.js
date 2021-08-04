@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cors = require('cors');
-
+const PORT=process.env.PORT || 5000
 
 //import routers
 const authRoute = require("./routes/auth");
@@ -45,4 +45,4 @@ const corsOpts = {
   app.use("/api/user", authRoute);
   app.use("/blog",postRoute)
 
-app.listen(3000, () => console.log("server is running at port 3000"));
+app.listen(PORT, () => console.log("server is running at port 3000"));
