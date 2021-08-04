@@ -42,7 +42,11 @@ const corsOpts = {
 
   //routes
 
+  app.get("/",(req,res)=>{
+    res.send("Home Page")
+  })
   app.use("/api/user", authRoute);
   app.use("/blog",postRoute)
+ 
 
-app.listen(PORT, () => console.log("server is running at port 3000"));
+app.listen(PORT, () => console.log("server is running at port 5000"));
